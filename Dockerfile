@@ -1,8 +1,7 @@
 FROM ruby:3.1.2
 ENV TZ Asia/Tokyo
 
-RUN apt-get update -qq \
-    && apt-get install -y build-essential libpq-dev nodejs
+RUN apt update -qq && apt install -y postgresql-client
 RUN mkdir /myapp
 
 WORKDIR /myapp
